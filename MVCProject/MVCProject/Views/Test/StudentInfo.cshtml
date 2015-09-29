@@ -1,0 +1,26 @@
+﻿@model MVCProject.ViewModels.StudentViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StudentInfo</title>
+</head>
+<body>
+    <div>
+        <b>
+            Student Details:
+        </b><br />
+        <div>
+            Student Name:@Model.StudentName<br />
+            <span style="background-color:@Model.SalaryColor">Parent Salary: @Model.SalaryOfParent</span>
+            <br/>
+            Student College: @Model.StudentClg
+        </div><br />
+    </div>
+</body>
+</html>

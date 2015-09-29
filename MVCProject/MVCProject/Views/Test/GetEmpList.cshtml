@@ -1,0 +1,36 @@
+﻿@model MVCProject.ViewModels.EmployeeViewModelList
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetEmpList</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <tr>
+                <th>Employee Name</th>
+                <th>Employee Salary</th>
+            </tr>
+            @foreach (MVCProject.ViewModels.EmployeeViewModel item in Model.employees)
+            {
+                <tr>
+                    <td>
+                        @item.EmployeeName
+                    </td>
+                    <td><span style="background-color:@item.SalaryColor">@item.EmployeeSalary</span></td>
+                    </tr>
+
+            }
+
+
+        </table>
+ 
+    </div>
+</body>
+</html>

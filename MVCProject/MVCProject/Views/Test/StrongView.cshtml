@@ -1,0 +1,32 @@
+﻿@model MVCProject.Models.Employee
+@{
+    Layout = null;
+   
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StrongView</title>
+</head>
+<body>
+    <div>
+        Employee Details:<br />
+        Employee FirsName: @Model.FirstName <br/>
+        Employee LastName: @Model.LastName<br/>
+        @if (@Model.Salary > 15000)
+        {
+            <span style="background-color:yellow">Employee Salary:@Model.Salary </span>
+        }
+        else
+        {
+            <span style="background-color:green">Employee Salary:@Model.Salary</span>
+        }
+    </div>
+</body>
+
+
+
+</html>

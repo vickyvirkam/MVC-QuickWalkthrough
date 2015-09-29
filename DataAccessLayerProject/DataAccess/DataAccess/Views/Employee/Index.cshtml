@@ -1,0 +1,43 @@
+﻿@model DataAccess.ViewModels.EmployeeViewModelList
+@{
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+@section TitleSection{
+    My View
+    }
+
+@section ContentBody
+{
+    <div>
+        @{
+            Html.RenderAction("GetNewLink");
+
+        }
+
+
+
+        <table border="1">
+            <tr>
+                <th>Employee Name</th>
+                <th>Employee Salary</th>
+            </tr>
+
+            @foreach (DataAccess.ViewModels.EmployeeViewModel item in Model.employees)
+            {
+                <tr>
+                    <td>@item.EmployeeName</td>
+                    <td><span style="background-color:@item.SalaryColor">@item.EmployeeSalary</span></td>
+
+                </tr>
+            }
+
+
+
+
+        </table>
+    </div>
+    }
+

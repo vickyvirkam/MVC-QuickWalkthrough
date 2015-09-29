@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+    MVCProject.Models.Employee emp = (MVCProject.Models.Employee)ViewData["Employee"];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee</title>
+</head>
+<body>
+    <div>
+        <b>  Employee Details: </b> <br/>
+        <h1>Employee FirstName:@emp.FirstName</h1>
+        <h2>Employee LastName:@emp.LastName</h2>
+        <h3>Employee Salary:@emp.Salary</h3>
+    </div>
+</body>
+</html>

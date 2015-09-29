@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+    MVCProject.Models.Student data = (MVCProject.Models.Student)(ViewBag.Student);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student</title>
+</head>
+<body>
+    <div> 
+        <b>Student Details:</b>
+        <h1>Student NO: @data.StudentNo.ToString("C")</h1>
+        <h2>Student Name: @data.StudentName</h2>
+        <h2>Student Clg: @data.StudentClg</h2>
+    </div>
+</body>
+</html>
